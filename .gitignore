@@ -1,0 +1,4 @@
+static/scss
+static/*.json
+static/node_modules
+static/img

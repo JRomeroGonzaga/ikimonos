@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% block head_content %}
+  {% endblock %}
+
+  {% load static %}
+  <link rel="icon" href="{% static 'img/ikimono/favi.png' %}" />
+  <link rel="stylesheet" href="{% static 'css/ikimono.css' %}" />
+  <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+  <script src="https://kit.fontawesome.com/feb57cb747.js"></script>
+
+</head>
+
+<body>
+
+  {% include 'nav.html' %}
+
+  {% include 'colors.html' %}
+
+  {% block body_content %}
+  {% endblock %}
+
+  {% include 'footer.html' %}
+
+  <script src="{% static 'js/ikimono.js' %}"></script>
+  {% block scripts %}
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  {% endblock %}
+
+</body>
+
+</html>
