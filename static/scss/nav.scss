@@ -1,0 +1,106 @@
+// White Palete //
+$color-primary: #ff6600;
+$color-white: #ffffff;
+$color-black: #1f1f1f;
+$color-graydark: #333333;
+$color-graymedium: #545454;
+$color-graylight: #dddddd;
+
+.menu-navigation {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  font-size: 14px;
+  z-index: 1000;
+  transition: .3s;
+}
+
+.nav-content {
+  display: grid;
+  grid-template-columns: 250px 1fr 230px;
+  grid-template-rows: 60px;
+  justify-content: center;
+}
+
+.brand-content {
+  text-align: center;
+  align-self: center;
+}
+
+.logo {
+  width: 40%;
+  height: 3em;
+}
+
+.menu-links-content {
+  justify-self: end;
+  align-self: center;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+}
+
+.item-menu {
+  padding: 0.358em;
+}
+
+.item-link {
+  padding: 0 0.358em;
+}
+
+.item-link:hover {
+  color: $color-white;
+}
+
+.menu-navigation form {
+  justify-self: center;
+  align-self: center;
+}
+
+.search-box {
+  padding: 10px;
+  border: 1px solid $color-primary;
+  border-radius: 10px;
+  font-weight: 500;
+  color: $color-graydark;
+  outline: none;
+}
+
+.menu-navigation .search-box {
+  width: 70px;
+  transition: .3s;
+  
+}
+
+.menu-navigation .search-box:hover,
+.menu-navigation .search-box:focus {
+  width: auto;
+  transition: .3s;
+}
+
+.bg-dark {
+  background: rgba(0, 0, 0, .75) !important;
+  transition: .3s;
+}
+
+.bg-dark .search-box {
+  background: $color-graydark !important;
+  color: $color-graylight !important;
+  border: 1px solid $color-graymedium;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 320px) {
+}

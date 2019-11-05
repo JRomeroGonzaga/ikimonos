@@ -1,0 +1,52 @@
+// White Palete //
+$color-primary: #ff6600;
+$color-white: #ffffff;
+$color-black: #1f1f1f;
+$color-graydark: #333333;
+$color-graymedium: #545454;
+$color-graylight: #dddddd;
+
+// Dark Palete //
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: $color-graydark;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $color-primary;
+  border-radius: 10px;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+a:hover {
+  color: $color-black;
+}
+
+@import "reusable.scss";
+
+@import "colors.scss";
+
+@import "nav.scss";
+
+@import "carousel.scss";
+
+@import "videos-home.scss";

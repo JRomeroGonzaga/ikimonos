@@ -1,0 +1,49 @@
+$color-primary: #ff6600;
+$color-white: #ffffff;
+$color-black: #1f1f1f;
+$color-graydark: #333333;
+$color-graymedium: #545454;
+$color-graylight: #dddddd;
+
+.btn-options {
+  position: fixed;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  background-color: $color-black;
+  top: 30%;
+  left: 0;
+  color: $color-primary;
+  font-weight: 700;
+  z-index: 999;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
+  flex-wrap: wrap;
+}
+
+.btn-options p {
+  margin-top: 5px;
+  font-size: .44rem;
+}
+
+.btn-social {
+  position: fixed;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  background-color: $color-black;
+  top: 30%;
+  left: 0;
+  color: $color-primary;
+  font-weight: 700;
+  z-index: 999;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.75);
+  flex-wrap: wrap;
+}
