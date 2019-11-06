@@ -80,78 +80,19 @@
 <section class="container">
   <div class="content-outstanding">
     <div class="last-series">
+      {% for serie in series %}
+      {% if serie.state == 'EM' %}
       <div class="serie-content">
         <a href="#">
           <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/Granbelm.jpg' %}" class="img-fluid" alt="" class="" />
+          <img src="{{ serie.picture.url }}" class="img-fluid" alt="" class="" />
           <div class="serie-title">
-            Granbelm
+            {{ serie.name }}
           </div>
         </a>
       </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/mom.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/dragon_crisis.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/blackclover.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/ORESUKI.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/Dr._Stone.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/demon.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
-      <div class="serie-content">
-        <a href="#">
-          <span class="estreno">Estreno</span>
-          <img src="{% static 'img/series/post/Isekai.jpg' %}" class="img-fluid" alt="" class="" />
-          <div class="serie-title">
-            Granbelm
-          </div>
-        </a>
-      </div>
+      {% endif %}
+      {% endfor %}
     </div>
     <div class="trending">
       <div class="series-trending">

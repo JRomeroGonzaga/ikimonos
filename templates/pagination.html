@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="container">
+    <div class="row {% if request.user.is_anonymous %}justify-content-between{% endif %}">
+        {% if is_paginated %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-md">
+                {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                <li class="page-item active"><a class="page-link" href="#">{{ i }} <span
+                            class="sr-only">(current)</span></a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+        {% endif %}
+        {% if request.user.is_anonymous %}
+        <div class="title-series">
+            Crea tu cuenta en<a class="sm" href="{% url 'home' %}"><img class="logo-pg"
+                    src="{% static 'img/ikimono/logo-ikimono.png' %}"></a>
+        </div>
+        {% endif %}
+    </div>
+</div>

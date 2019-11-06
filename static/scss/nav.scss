@@ -20,9 +20,11 @@ $color-graylight: #dddddd;
   grid-template-columns: 250px 1fr 230px;
   grid-template-rows: 60px;
   justify-content: center;
+  grid-template-areas: "brand-content" "menu-links-content" "nav-search";
 }
 
 .brand-content {
+  grid-area: 'brand-content';
   text-align: center;
   align-self: center;
 }
@@ -33,6 +35,7 @@ $color-graylight: #dddddd;
 }
 
 .menu-links-content {
+  grid-area: 'menu-links-content';
   justify-self: end;
   align-self: center;
   font-size: 1em;
@@ -56,7 +59,8 @@ $color-graylight: #dddddd;
   color: $color-white;
 }
 
-.menu-navigation form {
+.nav-search {
+  grid-area: 'nav-search';
   justify-self: center;
   align-self: center;
 }

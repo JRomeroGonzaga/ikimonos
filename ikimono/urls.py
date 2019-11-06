@@ -25,6 +25,7 @@ from home import views as home_views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', home_views.HomeView.as_view()),
+    path('', home_views.HomeView.as_view(), name='home'),
+    path('', include(('series.urls', 'series'), namespace='series'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

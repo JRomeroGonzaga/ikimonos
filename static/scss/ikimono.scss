@@ -11,11 +11,14 @@ $color-graylight: #dddddd;
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   color: $color-graydark;
@@ -50,3 +53,7 @@ a:hover {
 @import "carousel.scss";
 
 @import "videos-home.scss";
+
+@import "all-series.scss";
+
+@import "pagination.scss";

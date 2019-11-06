@@ -1,0 +1,17 @@
+.all-series-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 15px;
+  padding: 30px 0;
+}
+
+.banner-content {
+
+}
+
+.image-banner {
+  background: url(../img/ikimono/banner-series.jpg) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300px;
+}

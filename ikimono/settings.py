@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Local 
     'widget_tweaks',
     'home',
+    'series',
 ]
 
 MIDDLEWARE = [
