@@ -1,4 +1,5 @@
 from django.db import models
+from django.template import defaultfilters
 
 # Create your models here.
 
@@ -34,11 +35,17 @@ class Series(models.Model):
         choices=STATE, 
         default='EM'
     )
+
+    slug = models.SlugField(max_length=100)
     
     sinopsis = models.TextField(blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = defaultfilters.slugify(self.name)
+        super(Series, self).save(*args, **kwargs)
 
     def __str__(self):
         """Return name Serie"""
@@ -62,9 +69,15 @@ class Episodes(models.Model):
         null=False, 
         default=''
     )
+    
+    slug = models.SlugField(max_length=100)
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = defaultfilters.slugify(self.name)
+        super(Episodes, self).save(*args, **kwargs)
 
     def __str__(self):
         """Return Episode"""

@@ -21,7 +21,8 @@ class SeriesAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Main information', {
             'fields': (
-                ('name', 'state'), 
+                ('name', 'state'),
+                ('slug')
             )
         }),
 
@@ -62,7 +63,7 @@ class EpisodesAdmin(admin.ModelAdmin):
         ('Main information', {
             'fields': (
                 ( 'serie', 'episode'), 
-                ('name')
+                ('name', 'slug')
             )
         }),
         ('Video URL', {

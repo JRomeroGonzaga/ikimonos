@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_content %}
+<title>{{ serie.name }} | Ikimono</title>
+{% endblock %}
+
+{% block body_content %}
+<section class="ctnt-img-infs">
+  <div class="bnn-serie" style="background-image: url('{{ serie.picture_banner.url }}');">
+  </div>
+</section>
+<section class="container">
+  <div class="content-sr-inf">
+    <aside class="content-sr-aside">
+      <div class="post-serie">
+        <img class="img-fluid" src="{{ serie.picture.url }}" alt="" srcset="">
+      </div>
+    </aside>
+    <div class="sr-inf">
+      <div class="serie-title fz-20">{{ serie.name }}</div>
+      <div class="content-sinopsis">
+        {{ serie.sinopsis }}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+{% endblock %}

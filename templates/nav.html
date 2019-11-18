@@ -13,8 +13,11 @@
         <li class="item-menu"><a href="#" class="item-link">Iniciar sesión</a></li>
       </ul>
     </div>
-    <form class="nav-search" action="" method="GET">
-      <input class="search-box" type="search" name="search-box" placeholder="Buscardor de animes..." />
+    <form class="nav-search" action="{% url 'series:series' %}" method="GET">
+      <input id="search-box" type="search" name="slug" placeholder="Buscardor de animes..." />
+      <button id="btn-search">
+        <i class="fa fa-search"></i>
+      </button>
     </form>
   </div>
 </nav>

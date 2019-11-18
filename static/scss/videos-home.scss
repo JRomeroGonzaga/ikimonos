@@ -98,5 +98,9 @@ $color-graylight: #dddddd;
 .series-trending {
   height: 90px;
   padding: 5px;
-  
 }
+
+  .content-outstanding {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }

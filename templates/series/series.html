@@ -15,10 +15,10 @@
   <div class="all-series-content">
     {% for serie in series %}
     <div class="serie-content">
-      <a href="#">
+      <a href="{% url 'series:serie' slug=serie.slug %}">
         <span class="estreno">Estreno</span>
         <img src="{{ serie.picture.url }}" class="img-fluid" alt="" class="" />
-        <div class="serie-title">
+        <div class="serie-title ellipsis">
           {{ serie.name }}
         </div>
       </a>
@@ -27,6 +27,6 @@
   </div>
 </section>
 
-{% include "pagination.html" %}
+{% include 'pagination.html' %}
 
 {% endblock %}
